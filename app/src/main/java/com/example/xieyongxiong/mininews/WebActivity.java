@@ -32,6 +32,10 @@ public class WebActivity extends AppCompatActivity {
         settings.setJavaScriptEnabled(true);
         settings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 
+        //使网页适应手机屏幕
+        settings.setLoadWithOverviewMode(true);
+        settings.setUseWideViewPort(true);
+
         webView.setWebViewClient(new WebViewClient(){
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
